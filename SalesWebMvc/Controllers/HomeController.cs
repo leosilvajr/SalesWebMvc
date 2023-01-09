@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace SalesWebMvc.Controllers
 {
-                    //Todo controlador vai ser uma subclasse de Controller
     public class HomeController : Controller
     {
                 //Resultado de uma ação
