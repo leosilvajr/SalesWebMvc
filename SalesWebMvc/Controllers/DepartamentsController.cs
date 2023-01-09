@@ -10,12 +10,12 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {                                           //Dependencia de SalesWebMvcContext
-    public class DepartmentsController : Controller    
+    public class DepartamentsController : Controller    
     {
         private readonly SalesWebMvcContext _context;
 
         //Construtor para injeção de dependencia;
-        public DepartmentsController(SalesWebMvcContext context)
+        public DepartamentsController(SalesWebMvcContext context)
         {
             _context = context;
         }
@@ -55,7 +55,7 @@ namespace SalesWebMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Department departament)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Departament departament)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace SalesWebMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Department departament)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Departament departament)
         {
             if (id != departament.Id)
             {

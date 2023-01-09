@@ -30,13 +30,13 @@ namespace SalesWebMvc.Data
                 return; // O Banco de Dados ja fói populado 
             }
 
-            Department d1 = new Department(1, "Computers");
+            Departament d1 = new Departament(1, "Computers");
 
-            Department d2 = new Department(2, "Electronics");
+            Departament d2 = new Departament(2, "Electronics");
 
-            Department d3 = new Department(3, "Fashion");
+            Departament d3 = new Departament(3, "Fashion");
 
-            Department d4 = new Department(4, "Books");
+            Departament d4 = new Departament(4, "Books");
 
 
 
