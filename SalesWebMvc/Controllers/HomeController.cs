@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace SalesWebMvc.Controllers
 {
+                    //Todo controlador vai ser uma subclasse de Controller
     public class HomeController : Controller
     {
+                //Resultado de uma ação
+                //IActionResult é uma interface do tipo generico para todo resultado de alguma ação
         public IActionResult Index()
         {
             return View();
@@ -17,7 +20,9 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            //Objeto ViewData        //Mensagem sera passada para a Chave "Message" do Objeto ViewData
+            ViewData["Message"] = "Salles Web MVC App from C#";
+            ViewData["Autor"] = "Leonardo Silva";
 
             return View();
         }
