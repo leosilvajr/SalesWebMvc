@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20230109123722_Initial.cs" />
+    <Compile Remove="Migrations\20230109123722_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20230109135359_OtherEntities.cs" />
+    <Compile Remove="Migrations\20230109135359_OtherEntities.Designer.cs" />
+    <Compile Remove="Migrations\20230109192208_Department.cs" />
+    <Compile Remove="Migrations\20230109192208_Department.Designer.cs" />
+    <Compile Remove="Migrations\20230109192508_NewDepartment.cs" />
+    <Compile Remove="Migrations\20230109192508_NewDepartment.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
@@ -20,6 +31,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

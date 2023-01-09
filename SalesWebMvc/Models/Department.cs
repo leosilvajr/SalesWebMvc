@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SalesWebMvc.Models
 {
-    public class Departament
+    public class Department
     {   //Correção
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,12 +13,12 @@ namespace SalesWebMvc.Models
         //Implementando a associação do Departamento com o Seller
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
 
-        public Departament()
+        public Department()
         {
 
         }
 
-        public Departament(int id, string name)
+        public Department(int id, string name)
         {
             Id = id;
             Name = name;

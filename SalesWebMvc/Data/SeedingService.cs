@@ -23,20 +23,20 @@ namespace SalesWebMvc.Data
         public void Seed()
 
         {       //Testa se existe algum resgistro na tabela
-            if (_context.Departament.Any() ||
+            if (_context.Department.Any() ||
                     _context.Seller.Any()  ||
                         _context.SalesRecord.Any()) 
             {
                 return; // O Banco de Dados ja fói populado 
             }
 
-            Departament d1 = new Departament(1, "Computers");
+            Department d1 = new Department(1, "Computers");
 
-            Departament d2 = new Departament(2, "Electronics");
+            Department d2 = new Department(2, "Electronics");
 
-            Departament d3 = new Departament(3, "Fashion");
+            Department d3 = new Department(3, "Fashion");
 
-            Departament d4 = new Departament(4, "Books");
+            Department d4 = new Department(4, "Books");
 
 
 
@@ -116,7 +116,7 @@ namespace SalesWebMvc.Data
 
             //Adicionar esses objetos no Banco de dados Ultilizando o Entity FrameWork
 
-            _context.Departament.AddRange(d1, d2, d3, d4);
+            _context.Department.AddRange(d1, d2, d3, d4);
             _context.Seller.AddRange(s1 , s2 , s3 , s4 , s5 , s6);
             _context.SalesRecord.AddRange(r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15
                 , r16, r17, r18, r19, r20, r21, r22, r23, r2, r25, r26, r27, r28, r29, r30);
