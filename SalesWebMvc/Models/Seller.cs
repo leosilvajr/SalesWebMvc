@@ -13,6 +13,13 @@ namespace SalesWebMvc.Models
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
         //Associação para muitos.
+
+        //Garantindo pro Entity Framework que o Id vai ter que existir, uma vez que o tipo ind nao pode ser nulo
+        public int DepartmentId { get; set; }
+
+        //Add-Migration DepartmentForeignKey
+        //Update-database
+
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
