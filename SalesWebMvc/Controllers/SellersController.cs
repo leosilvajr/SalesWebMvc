@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SalesWebMvc.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,16 @@ namespace SalesWebMvc.Controllers
 {
     public class SellersController : Controller
     {
-        public IActionResult Index()
+        private readonly SellerService _sellerService;
+        public SellersController(SellerService sellerService)
         {
-            return View();
+            _sellerService = sellerService;
+        }
+        public IActionResult Index() //Chamo o controlador
+        {
+            //Controlador acessou o Modesl, pegou o dado na list e encaminha os dados para a view
+            var list = _sellerService.FindAll();
+            return View(list);
         }
     }
 }
