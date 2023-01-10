@@ -69,5 +69,21 @@ namespace SalesWebMvc.Controllers
             return RedirectToAction(nameof(Index));//Retorna o Index de Sellers
 
         }
+
+        public IActionResult Details(int? id)
+        {//Logica bem parecida com o DeleteGet
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var obj = _sellerService.FindById(id.Value);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+
     }
 }
