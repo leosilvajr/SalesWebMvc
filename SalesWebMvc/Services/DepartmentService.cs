@@ -1,4 +1,5 @@
-﻿using SalesWebMvc.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,17 @@ namespace SalesWebMvc.Services
         }
 
         //Metodo para retornar todos os Departamentos
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
             //Agora vamos registar o DepartmentService na Injeção de Dependencia
         }
+
+        //public List<Department> FindAll()
+        //{
+        //    return _context.Department.OrderBy(x => x.Name).ToList();
+        //    //Agora vamos registar o DepartmentService na Injeção de Dependencia
+        //}
+
     }
 }
